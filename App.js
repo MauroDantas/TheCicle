@@ -3,12 +3,16 @@ import { useColorScheme, Image } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import Fevelho from './src/page/Mapa/Fevelho.js';
-import Estre from './src/page/Mapa/Estre.js';
-import Recgional from './src/page/Mapa/Recgional.js'
+import Fevelho from './src/page/Details/Fevelho.js';
+import Estre from './src/page/Details/Estre.js';
+import Recgional from './src/page/Details/Recgional.js'
 import Menu from './src/page/Menu/menu.js';
 import Mapa from './src/page/Mapa/Mapa.js';
 import Sobre from './src/page/Configuracoes/config.js';
+
+import HowPlastic from './src/page/How/HowPlastic.js';
+
+import WhatPlastic from './src/page/What/WhatPlastic.js';
 
 
 const Tab = createBottomTabNavigator();
@@ -18,6 +22,7 @@ function App() {
   let colorScheme = useColorScheme();
   const scheme = useColorScheme();
   return (
+    <>
       <Tab.Navigator useLegacyImplementation initialRouteName="Menu" 
       screenOptions={{
         headerShown: false, 
@@ -47,7 +52,8 @@ function App() {
         }} 
         component={Sobre}/>
 
-      </Tab.Navigator>     
+      </Tab.Navigator> 
+      </>    
   );
 }
 
@@ -58,7 +64,10 @@ export default function MapNav(){
     <Stack.Screen name="Home" component={App} options={{tabBarShowLabel: false}}/>
     <Stack.Screen name="Fevelho" component={Fevelho} options={{tabBarShowLabel: false}}/>
     <Stack.Screen name="Recgional" component={Recgional} options={{tabBarShowLabel: false}}/> 
-    <Stack.Screen name="Estre" component={Estre} options={{tabBarShowLabel: false}}/>     
+    <Stack.Screen name="Estre" component={Estre} options={{tabBarShowLabel: false}}/>
+    <Stack.Screen name="HowPlastic" component={HowPlastic} options={{tabBarShowLabel: false}}/>
+     
+    <Stack.Screen name="WhatPlastic" component={WhatPlastic} options={{tabBarShowLabel: false}}/>        
     </Stack.Navigator>
     </NavigationContainer>
   )

@@ -15,7 +15,7 @@ export default function Sobre() {
 
       <View>
 
-        <View style={styles.card}>
+        <View style={[styles.card, {backgroundColor: colorScheme === 'light' ? '#68C655' : 'rgb(45, 45, 45)'}]}>
           <View style={{alignContent:'space-between'}}>
             <Text style={styles.Title}>SOBRE NÓS</Text>
             <Text style={[styles.textoSobre, {color: colorScheme === 'light' ? '#FFF' : '#FFF'}]}>
@@ -41,8 +41,8 @@ export default function Sobre() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 1,
-    paddingHorizontal: 3,
+    paddingTop: 20,
+    paddingHorizontal: 0,
     paddingBottom: 0,
     backgroundColor: '#FFF'
   },
@@ -52,14 +52,16 @@ const styles = StyleSheet.create({
     height:45,
     resizeMode: 'stretch',
     marginBottom:5,
-    marginTop:40,
+    marginTop:20,
     source:'../../imagens/header.png'
   },
   card:{
     backgroundColor: '#68C655',
     width: '100%',
-    height: '91%',
+    height: '90%',
     borderBottomRightRadius: 120,
+    borderTopWidth: 1,
+    borderTopColor: '#FFF',
     overflow: 'hidden',
     marginTop: 16,
   },
@@ -77,7 +79,7 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 20,
     marginTop: 24,
-    marginLeft: 20
+    marginLeft: 20,
   },
   iconeApp:{
     width:170,

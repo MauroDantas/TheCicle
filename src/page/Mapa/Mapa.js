@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
 
   header:{
     alignItems:'center',
-    marginBottom:1,
+    marginBottom:0,
     marginTop:10
   },
 });

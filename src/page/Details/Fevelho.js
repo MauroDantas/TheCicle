@@ -28,7 +28,7 @@ const Fevelho = () => {
     <SafeAreaView style={{ flex: 1, backgroundColor: colorScheme === 'light' ? '#fff' : 'rgb(45, 45, 45)'}}>
       <View style={[styles.container]}>
         <TouchableOpacity onPress={handleNavigateBack}>
-          <Icon name="arrow-left" size={20} color="#34cb79" />
+          <Icon name="arrow-left" size={20} color="#68C655" />
         </TouchableOpacity>
 
         <Image style={styles.pointImage} source={require('../../imagens/Ferro.jpg')} />
@@ -36,7 +36,7 @@ const Fevelho = () => {
         <Text style={[styles.pointName, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Reciclagem Ferro Velho</Text>
         <View style={styles.address}>
           <Text style={[styles.addressTitle, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Endereço</Text>
-          <Text style={styles.addressContent}>Esrt. Benedito Cesário de Oliveira, 1941 - Jardim Record, Taboão da Serra - SP</Text>
+          <Text style={[styles.addressContent, {color: colorScheme === 'light' ? '#C9C9C9' : '#FFF'}]}>Esrt. Benedito Cesário de Oliveira, 1941 - Jardim Record, Taboão da Serra - SP</Text>
           <Text style={[styles.description, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>
             A Reciclagem Ferro Velho é uma instituição de catadores que colaboram com o meio ambiente
              com a coleta de Metais, Papéis e Vidro. A instuição paga devidamente cada catador de acordo com
@@ -44,9 +44,18 @@ const Fevelho = () => {
                responsável por efetuar os processos de reciclagem.
           </Text>
           <View style={styles.imgBetween}>
-          <Image style={styles.imgInfo} source={require('../../imagens/cardVidro.png')}/>
-          <Image style={styles.imgInfo} source={require('../../imagens/cardAluminio.png')}/>
-          <Image style={styles.imgInfo} source={require('../../imagens/cardPapel.png')}/>
+          <View>
+            <Image style={styles.imgInfo} source={require('../../imagens/cardVidro.png')}/>
+            <Text style={[styles.textimg, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Vidro</Text>
+          </View>
+          <View>
+            <Image style={styles.imgInfo} source={require('../../imagens/cardAluminio.png')}/>
+            <Text style={[styles.textimg, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Alumínio</Text>
+          </View>
+          <View>
+            <Image style={styles.imgInfo} source={require('../../imagens/cardPapel.png')}/>
+            <Text style={[styles.textimg, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Papel</Text>
+          </View>
           </View>
         </View>
       </View>
@@ -68,8 +77,8 @@ const Fevelho = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 32,
-    paddingTop: 35,
+    padding: 29,
+    paddingTop: 40
   },
 
   pointImage: {
@@ -77,18 +86,18 @@ const styles = StyleSheet.create({
     height: 180,
     resizeMode: 'cover',
     borderRadius: 10,
-    marginTop: 25,
+    marginTop: 20,
   },
 
   pointName: {
     color: '#00000',
-    fontSize: 28,
-    marginTop: 24,
+    fontSize: 26,
+    marginTop: 20,
   },
 
 
   address: {
-    marginTop: 32,
+    marginTop: 15,
   },
   
   addressTitle: {
@@ -105,35 +114,44 @@ const styles = StyleSheet.create({
   description: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 15,
     lineHeight: 30,
     textAlign:'justify',
-    color: '#2A2A2A'
+    color: '2A2A2A'
   },
-  imgInfo:{
-    width: 90,
-    height: 90,
-    marginBottom: 20,
-    resizeMode: 'stretch',
+
+  textimg: {
+    color:'#2A2A2A',
+    paddingVertical: 5,
+    paddingHorizontal: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    marginLeft: 15
+  },
+
+  imgInfo:{
+    width: 80,
+    height: 80,
+    marginBottom: 5,
+    resizeMode: 'stretch',
+    alignItems: 'center',
+    margin:5
   },
 
   imgBetween: {
-    paddingVertical: 1,
-    paddingHorizontal: 32,
+    paddingVertical: 20,
+    paddingHorizontal: 14,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
 
   footer: {
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: useColorScheme === 'light' ? '#999' : '#FFF',
-    paddingVertical: 20,
+    borderColor: '#999',
+    paddingVertical: 15,
     paddingHorizontal: 32,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
     
   },
   

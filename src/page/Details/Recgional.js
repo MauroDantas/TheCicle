@@ -20,15 +20,15 @@ const Recgional = () => {
   function handleComposeMail() {
     MailComposer.composeAsync({
       subject: 'Interesse na coleta de resíduos',
-      recipients: ['Reciclagemferrovelho@gmail.com']
+      recipients: ['Cristinasantana06@yahoo.com.br']
     })
   }
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colorScheme === 'light' ? '#fff' : 'rgb(45, 45, 45)' }}>
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
         <TouchableOpacity onPress={handleNavigateBack}>
-          <Icon name="arrow-left" size={20} color="#34cb79" />
+          <Icon name="arrow-left" size={20} color="#68C655" />
         </TouchableOpacity>
 
         <Image style={styles.pointImage} source={require('../../imagens/Recgional.png')} />
@@ -36,7 +36,7 @@ const Recgional = () => {
         <Text style={[styles.pointName, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Reciclagem Regional</Text>
         <View style={styles.address}>
           <Text style={[styles.addressTitle, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Endereço</Text>
-          <Text style={styles.addressContent}>Esrt. Ten. José Maria da Cunha, 836 - Jardim Record, Taboão da Serra - SP</Text>
+          <Text style={[styles.addressContent, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Esrt. Ten. José Maria da Cunha, 836 - Jardim Record, Taboão da Serra - SP</Text>
           <Text style={[styles.description, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>
             A Reciclagem Regional é uma instituição de catadores que colaboram com o meio ambiente
              com a coleta de Metais, Papéis e Vidro. A instuição paga devidamente cada catador de acordo com
@@ -46,20 +46,19 @@ const Recgional = () => {
           <View style={styles.imgBetween}>
           <View>
             <Image style={styles.imgInfo} source={require('../../imagens/cardVidro.png')}/>
-            <Text style={{color:'#fff', alignItems: 'center', left:30}}>Vidro</Text>
-            <Text>Vidro</Text>
+            <Text style={[styles.textimg, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Vidro</Text>
           </View>
           <View>
             <Image style={styles.imgInfo} source={require('../../imagens/cardAluminio.png')}/>
-            <Text style={{color:'#fff', alignItems: 'center', left:20}}>Alumínio</Text>
+            <Text style={[styles.textimg, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Alumínio</Text>
           </View>
           <View>
             <Image style={styles.imgInfo} source={require('../../imagens/cardPapel.png')}/>
-            <Text style={{color:'#fff', alignItems: 'center', left:30}}>Papel</Text>
+            <Text style={[styles.textimg, {color: colorScheme === 'light' ? '#2A2A2A' : '#FFF'}]}>Papel</Text>
           </View>
           </View>
         </View>
-      </ScrollView>
+      </View>
       <View style={styles.footer}>
         <TouchableOpacity style={styles.button} onPress={() => openURL(url1)}>
           <FontAwesome name="whatsapp" size={20} color="#FFF" />
@@ -78,8 +77,8 @@ const Recgional = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 32,
-    paddingTop: 35
+    padding: 29,
+    paddingTop: 40
   },
 
   pointImage: {
@@ -92,8 +91,8 @@ const styles = StyleSheet.create({
 
   pointName: {
     color: '#00000',
-    fontSize: 28,
-    marginTop: 15,
+    fontSize: 26,
+    marginTop: 20,
   },
 
 
@@ -108,7 +107,7 @@ const styles = StyleSheet.create({
 
   addressContent: {
     lineHeight: 24,
-    marginTop: 4,
+    marginTop: 8,
     color: '#6C6C80'
   },
 
@@ -121,22 +120,27 @@ const styles = StyleSheet.create({
     color: '2A2A2A'
   },
 
+  textimg: {
+    color:'#2A2A2A',
+    paddingVertical: 5,
+    paddingHorizontal: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 26
+  },
+
   imgInfo:{
-    width: 90,
-    height: 90,
+    width: 80,
+    height: 80,
     marginBottom: 5,
     resizeMode: 'stretch',
     alignItems: 'center',
     margin:5
   },
 
-  textInfo:{
-
-  },
-
   imgBetween: {
     paddingVertical: 20,
-    paddingHorizontal: 14,
+    paddingHorizontal: 17,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
