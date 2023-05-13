@@ -22,3 +22,7 @@ Com a propagação eficiente de conhecimentos sobre reciclagem e a relação coo
 1. Clone o repositório em sua máquina local;
 2. Execute o comando `npm install` para instalar as dependências;
 3. Execute o comando `npm start` para rodar o servidor;
+
+## Link da demonstração
+
+https://drive.google.com/file/d/1YHYCINVmJ0JszVZqLenWNhEA6BHtkJpY/view?usp=drivesdk
